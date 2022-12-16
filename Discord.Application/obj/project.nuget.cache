@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "WyD2o8tTy6C8z/HLZX1TAn0XXU97WQcNP2eG7iK+uN+sjTiX3m/up3Iz6SUOhyHzNOr7BitR2/eFpaaYCRRsgw==",
+  "dgSpecHash": "7PAq5P0aSwFBwS4o6HsvfxSasiFSyYNDA8EEEW1td1YsCO88UcbuQmhk/fL04vobYPXVghFQJKG6t5/+5yZgEQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\dev\\RiderProjects\\Discord\\Discord.Application\\Discord.Application.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\dev\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
+    "C:\\Users\\dev\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512"
+  ],
   "logs": []
 }
