@@ -4,7 +4,7 @@ namespace Discord.Core.Entities;
 
 public class User : Entity
 {
-    public User(Guid id, string name, string email, string password, string tag, string avatar, DateTime created) 
+    public User(string id, string name, string email, string password, string tag, string avatar, DateTime created) 
         : base(id)
     {
         Name = name;

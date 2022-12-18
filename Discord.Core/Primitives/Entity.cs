@@ -2,12 +2,12 @@
 
 public class Entity
 {
-    public Entity(Guid id) => Id = id;
+    public Entity(string id) => Id = id;
 
     protected Entity()
     {
         
     }
 
-    public Guid Id { get; protected set; }
+    public string Id { get; protected set; }
 }
