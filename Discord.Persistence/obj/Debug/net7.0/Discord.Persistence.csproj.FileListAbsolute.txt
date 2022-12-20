@@ -1,0 +1,15 @@
+C:\Users\dev\RiderProjects\Discord\Discord.Persistence\bin\Debug\net7.0\Discord.Persistence.deps.json
+C:\Users\dev\RiderProjects\Discord\Discord.Persistence\bin\Debug\net7.0\Discord.Persistence.dll
+C:\Users\dev\RiderProjects\Discord\Discord.Persistence\bin\Debug\net7.0\Discord.Persistence.pdb
+C:\Users\dev\RiderProjects\Discord\Discord.Persistence\bin\Debug\net7.0\Discord.Core.dll
+C:\Users\dev\RiderProjects\Discord\Discord.Persistence\bin\Debug\net7.0\Discord.Core.pdb
+C:\Users\dev\RiderProjects\Discord\Discord.Persistence\obj\Debug\net7.0\Discord.Persistence.csproj.AssemblyReference.cache
+C:\Users\dev\RiderProjects\Discord\Discord.Persistence\obj\Debug\net7.0\Discord.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dev\RiderProjects\Discord\Discord.Persistence\obj\Debug\net7.0\Discord.Persistence.AssemblyInfoInputs.cache
+C:\Users\dev\RiderProjects\Discord\Discord.Persistence\obj\Debug\net7.0\Discord.Persistence.AssemblyInfo.cs
+C:\Users\dev\RiderProjects\Discord\Discord.Persistence\obj\Debug\net7.0\Discord.Persistence.csproj.CoreCompileInputs.cache
+C:\Users\dev\RiderProjects\Discord\Discord.Persistence\obj\Debug\net7.0\Discord.Persistence.csproj.CopyComplete
+C:\Users\dev\RiderProjects\Discord\Discord.Persistence\obj\Debug\net7.0\Discord.Persistence.dll
+C:\Users\dev\RiderProjects\Discord\Discord.Persistence\obj\Debug\net7.0\refint\Discord.Persistence.dll
+C:\Users\dev\RiderProjects\Discord\Discord.Persistence\obj\Debug\net7.0\Discord.Persistence.pdb
+C:\Users\dev\RiderProjects\Discord\Discord.Persistence\obj\Debug\net7.0\ref\Discord.Persistence.dll

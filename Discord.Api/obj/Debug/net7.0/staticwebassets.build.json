@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "akL9ERoYTuG/yarIrnNKYT52Uo9DA8WRWTL8UJD7rb8=",
+  "Source": "Discord.Api",
+  "BasePath": "_content/Discord.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

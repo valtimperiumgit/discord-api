@@ -1,0 +1,12 @@
+C:\Users\dev\RiderProjects\Discord\Discord.Core\bin\Debug\net7.0\Discord.Core.deps.json
+C:\Users\dev\RiderProjects\Discord\Discord.Core\bin\Debug\net7.0\Discord.Core.dll
+C:\Users\dev\RiderProjects\Discord\Discord.Core\bin\Debug\net7.0\Discord.Core.pdb
+C:\Users\dev\RiderProjects\Discord\Discord.Core\obj\Debug\net7.0\Discord.Core.csproj.AssemblyReference.cache
+C:\Users\dev\RiderProjects\Discord\Discord.Core\obj\Debug\net7.0\Discord.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dev\RiderProjects\Discord\Discord.Core\obj\Debug\net7.0\Discord.Core.AssemblyInfoInputs.cache
+C:\Users\dev\RiderProjects\Discord\Discord.Core\obj\Debug\net7.0\Discord.Core.AssemblyInfo.cs
+C:\Users\dev\RiderProjects\Discord\Discord.Core\obj\Debug\net7.0\Discord.Core.csproj.CoreCompileInputs.cache
+C:\Users\dev\RiderProjects\Discord\Discord.Core\obj\Debug\net7.0\Discord.Core.dll
+C:\Users\dev\RiderProjects\Discord\Discord.Core\obj\Debug\net7.0\refint\Discord.Core.dll
+C:\Users\dev\RiderProjects\Discord\Discord.Core\obj\Debug\net7.0\Discord.Core.pdb
+C:\Users\dev\RiderProjects\Discord\Discord.Core\obj\Debug\net7.0\ref\Discord.Core.dll

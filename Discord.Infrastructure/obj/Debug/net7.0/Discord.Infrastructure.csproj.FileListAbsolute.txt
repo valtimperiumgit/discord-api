@@ -1,0 +1,17 @@
+C:\Users\dev\RiderProjects\Discord\Discord.Infrastructure\bin\Debug\net7.0\Discord.Infrastructure.deps.json
+C:\Users\dev\RiderProjects\Discord\Discord.Infrastructure\bin\Debug\net7.0\Discord.Infrastructure.dll
+C:\Users\dev\RiderProjects\Discord\Discord.Infrastructure\bin\Debug\net7.0\Discord.Infrastructure.pdb
+C:\Users\dev\RiderProjects\Discord\Discord.Infrastructure\obj\Debug\net7.0\Discord.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\dev\RiderProjects\Discord\Discord.Infrastructure\obj\Debug\net7.0\Discord.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dev\RiderProjects\Discord\Discord.Infrastructure\obj\Debug\net7.0\Discord.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\dev\RiderProjects\Discord\Discord.Infrastructure\obj\Debug\net7.0\Discord.Infrastructure.AssemblyInfo.cs
+C:\Users\dev\RiderProjects\Discord\Discord.Infrastructure\obj\Debug\net7.0\Discord.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\dev\RiderProjects\Discord\Discord.Infrastructure\obj\Debug\net7.0\Discord.Infrastructure.dll
+C:\Users\dev\RiderProjects\Discord\Discord.Infrastructure\obj\Debug\net7.0\refint\Discord.Infrastructure.dll
+C:\Users\dev\RiderProjects\Discord\Discord.Infrastructure\obj\Debug\net7.0\Discord.Infrastructure.pdb
+C:\Users\dev\RiderProjects\Discord\Discord.Infrastructure\obj\Debug\net7.0\ref\Discord.Infrastructure.dll
+C:\Users\dev\RiderProjects\Discord\Discord.Infrastructure\bin\Debug\net7.0\Discord.Application.dll
+C:\Users\dev\RiderProjects\Discord\Discord.Infrastructure\bin\Debug\net7.0\Discord.Core.dll
+C:\Users\dev\RiderProjects\Discord\Discord.Infrastructure\bin\Debug\net7.0\Discord.Application.pdb
+C:\Users\dev\RiderProjects\Discord\Discord.Infrastructure\bin\Debug\net7.0\Discord.Core.pdb
+C:\Users\dev\RiderProjects\Discord\Discord.Infrastructure\obj\Debug\net7.0\Discord.Infrastructure.csproj.CopyComplete
