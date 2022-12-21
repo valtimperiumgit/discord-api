@@ -21,7 +21,7 @@ public class AuthorizationController : ApiController
         [FromBody] LoginRequest request,
         CancellationToken cancellationToken)
     {
-        var command = new LoginCommand(request.Email, request.Pssword);
+        var command = new LoginCommand(request.Email, request.Password);
 
         Result<string> tokenResponse = await Sender.Send(command, cancellationToken);
         
