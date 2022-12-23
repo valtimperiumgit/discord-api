@@ -15,4 +15,9 @@
       <ProjectReference Include="..\Discord.Core\Discord.Core.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Chat\Commands" />
+      <Folder Include="Message\Commands" />
+    </ItemGroup>
+
 </Project>
