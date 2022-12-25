@@ -4,7 +4,15 @@ namespace Discord.Core.Entities;
 
 public class Message : Entity
 {
-    public Message(string id, string userId, string content, int type, DateTime created, DateTime edited, List<string> readers) : base(id)
+    public Message(string id,
+        string userId,
+        string content,
+        int type,
+        DateTime created,
+        DateTime edited,
+        List<string> readers,
+        string chatId) 
+        : base(id)
     {
         Id = id;
         UserId = userId;
@@ -13,11 +21,10 @@ public class Message : Entity
         Created = created;
         Edited = edited;
         Readers = readers;
+        ChatId = chatId;
     }
-
-    public string Id { get; private set; }
-    
     public string UserId { get; private set; }
+    public string ChatId { get; private set; }
     
     public string Content { get; private set; }
     

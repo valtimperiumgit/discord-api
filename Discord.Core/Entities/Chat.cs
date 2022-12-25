@@ -13,8 +13,6 @@ public class Chat : Entity
         Type = type;
     }
 
-    public string Id { get; private set; }
-    
     public string Name { get; private set; }
     
     public List<string?> Members { get; private set; }

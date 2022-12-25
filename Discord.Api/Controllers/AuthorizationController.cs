@@ -53,12 +53,4 @@ public class AuthorizationController : ApiController
 
         return tokenResponse.IsSuccess ? Ok(tokenResponse.Value) : NotFound(tokenResponse.Error);
     }
-    
-    [Authorize]
-    [HttpGet("test")]
-    public async Task<IActionResult> Test()
-    {
-        return Ok("fsfs");
-    }
-    
 }

@@ -7,6 +7,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="Amazon.Lambda.AspNetCoreServer" Version="7.3.0" />
         <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.4.0" />
         <PackageReference Include="MediatR" Version="11.1.0" />
         <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
@@ -24,10 +25,6 @@
       <ProjectReference Include="..\Discord.Application\Discord.Application.csproj" />
       <ProjectReference Include="..\Discord.Infrastructure\Discord.Infrastructure.csproj" />
       <ProjectReference Include="..\Discord.Persistence\Discord.Persistence.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <Folder Include="Dtos" />
     </ItemGroup>
 
 </Project>

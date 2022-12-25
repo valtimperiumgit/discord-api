@@ -76,3 +76,9 @@ C:\Users\dev\RiderProjects\Discord\Discord.Api\bin\Debug\net7.0\Microsoft.Identi
 C:\Users\dev\RiderProjects\Discord\Discord.Api\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\dev\RiderProjects\Discord\Discord.Api\bin\Debug\net7.0\FluentValidation.dll
 C:\Users\dev\RiderProjects\Discord\Discord.Api\bin\Debug\net7.0\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\dev\RiderProjects\Discord\Discord.Api\bin\Debug\net7.0\Amazon.Lambda.APIGatewayEvents.dll
+C:\Users\dev\RiderProjects\Discord\Discord.Api\bin\Debug\net7.0\Amazon.Lambda.ApplicationLoadBalancerEvents.dll
+C:\Users\dev\RiderProjects\Discord\Discord.Api\bin\Debug\net7.0\Amazon.Lambda.AspNetCoreServer.dll
+C:\Users\dev\RiderProjects\Discord\Discord.Api\bin\Debug\net7.0\Amazon.Lambda.Core.dll
+C:\Users\dev\RiderProjects\Discord\Discord.Api\bin\Debug\net7.0\Amazon.Lambda.Logging.AspNetCore.dll
+C:\Users\dev\RiderProjects\Discord\Discord.Api\bin\Debug\net7.0\Amazon.Lambda.Serialization.SystemTextJson.dll
