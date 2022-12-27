@@ -3,7 +3,7 @@ using Discord.Core.Errors;
 using Discord.Core.Repositories;
 using Discord.Core.Shared;
 
-namespace Discord.Application.FriendRequest.Commands;
+namespace Discord.Application.FriendRequest.Commands.CreateFriendsRequest;
 
 public class CreateFriendRequestCommandHandler
    : ICommandHandler<CreateFriendRequestCommand, Core.Entities.FriendRequest>
@@ -23,10 +23,15 @@ public class CreateFriendRequestCommandHandler
       CreateFriendRequestCommand request,
       CancellationToken cancellationToken)
    {
+      if (request.requestingId == request.receivingId)
+      {
+         return Result.Failure<Core.Entities.FriendRequest>(DomainErrors.FriendRequest.SameIds);
+      }
+      
       var friendRequest = await _friendsRepository
          .GetFriendRequest(request.requestingId, request.receivingId);
 
-      if (friendRequest is null)
+      if (friendRequest is not null)
       {
          return Result.Failure<Core.Entities.FriendRequest>(DomainErrors.FriendRequest.RequestAlreadyExist);
       }

@@ -46,6 +46,8 @@ public class UserMongoModel : MongoModel<User>
     public BirthdayMongoModel Birthday { get; set; }
     [BsonElement("isAcceptNewsletters")]
     public bool IsAcceptNewsletters { get; set; }
+    [BsonElement("friends")]
+    public List<string> Friends { get; set; }
 
     public User ToDomainEntity()
     {
@@ -65,7 +67,8 @@ public class UserMongoModel : MongoModel<User>
                     Birthday.Month,
                     Birthday.Day)
                 .Value,
-            IsAcceptNewsletters
+            IsAcceptNewsletters,
+            Friends
         );
     }
 }

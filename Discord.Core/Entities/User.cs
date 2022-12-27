@@ -14,7 +14,8 @@ public class User : Entity
         string avatar,
         DateTime created,
         Birthday birthday,
-        bool isAcceptNewsletters) 
+        bool isAcceptNewsletters,
+        List<string> friends) 
         : base(id)
     {
         Name = name;
@@ -25,6 +26,7 @@ public class User : Entity
         Created = created;
         Birthday = birthday;
         IsAcceptNewsletters = isAcceptNewsletters;
+        Friends = friends;
     }
 
     public string Name { get; private set; }

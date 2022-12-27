@@ -1,6 +1,7 @@
 ﻿using Discord.Api.Abstracts;
 using Discord.Api.Dtos.User;
 using Discord.Application.FriendRequest.Commands;
+using Discord.Application.FriendRequest.Commands.CreateFriendsRequest;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;

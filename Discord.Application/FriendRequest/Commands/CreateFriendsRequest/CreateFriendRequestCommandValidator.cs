@@ -1,6 +1,6 @@
-﻿using Discord.Application.CustomValidators;
-using FluentValidation;
-namespace Discord.Application.FriendRequest.Commands;
+﻿using FluentValidation;
+
+namespace Discord.Application.FriendRequest.Commands.CreateFriendsRequest;
 
 public class CreateFriendRequestCommandValidator : AbstractValidator<CreateFriendRequestCommand>
 {

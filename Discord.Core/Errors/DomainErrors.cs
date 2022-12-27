@@ -66,5 +66,9 @@ public class DomainErrors
         public static readonly Error UsersAlreadyFriends = new(
             "FriendRequest.UsersIsAlreadyFriends",
             "Users already friends.");
+        
+        public static readonly Error SameIds = new(
+            "FriendRequest.SameIds",
+            "You can`t send friend request for yourself.");
     }
 }
