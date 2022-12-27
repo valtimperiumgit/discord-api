@@ -1,6 +1,13 @@
-﻿namespace Discord.Application.User.Queries.GetUserByNameAndTag;
+﻿using FluentValidation;
 
-public class GetUserByNameAndTagValidator
+namespace Discord.Application.User.Queries.GetUserByNameAndTag;
+
+public class GetUserByNameAndTagValidator : AbstractValidator<GetUserByNameAndTagQuery>
 {
-    
+    public GetUserByNameAndTagValidator()
+    {
+        RuleFor(x => x.name).NotEmpty();
+        
+        RuleFor(x => x.tag).NotEmpty();
+    }
 }

@@ -1,6 +1,8 @@
 ﻿using Discord.Api.Abstracts;
+using Discord.Api.Dtos.User;
 using Discord.Application.User.Queries.GetCurrentUsers;
 using Discord.Application.User.Queries.GetUserById;
+using Discord.Application.User.Queries.GetUserByNameAndTag;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -35,7 +37,7 @@ public class UserController : ApiController
             return HandleFailure(getUserByIdQueryResult);
         }
         
-        return Ok(getUserByIdQueryResult.Value);
+        return Ok(new UserDto(getUserByIdQueryResult.Value));
     }
     
     [HttpGet("current")]
@@ -54,6 +56,25 @@ public class UserController : ApiController
             return HandleFailure(getCurrentUsersResult);
         }
         
-        return Ok(getCurrentUsersResult.Value);
+        return Ok(getCurrentUsersResult.Value.Select(user => new UserDto(user)));
+    }
+    
+    [HttpGet("find")]
+    public async Task<IActionResult> GetUserByNameAndTag
+    (   [FromQuery] 
+        string name,
+        string tag,
+        CancellationToken cancellationToken)
+    {
+        var getUserByNameAndTagQuery = new GetUserByNameAndTagQuery(name, tag);
+
+        var getUserByNameAndTagResult = await _sender.Send(getUserByNameAndTagQuery, cancellationToken);
+        
+        if (getUserByNameAndTagResult.IsFailure)
+        {
+            return HandleFailure(getUserByNameAndTagResult);
+        }
+        
+        return Ok(new UserDto(getUserByNameAndTagResult.Value));
     }
 }
