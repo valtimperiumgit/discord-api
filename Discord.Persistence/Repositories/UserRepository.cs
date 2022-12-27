@@ -38,6 +38,27 @@ public sealed class UserRepository : IUserRepository
         return user.Result.ToDomainEntity();
     }
 
+    public async Task<User?> GetUserById(string id)
+    {
+        var user = (await _usersCollection
+            .FindAsync(user => user.Id == id)).FirstOrDefaultAsync();
+        
+        if (user.Result is null)
+        {
+            return null;
+        }
+        
+        return user.Result.ToDomainEntity();
+    }
+
+    public async Task<User?> GetUserByNameAndTag(string name, string tag)
+    {
+        var user = (await _usersCollection
+            .FindAsync(user => user.Name == name && user.Tag == tag)).FirstOrDefaultAsync();
+
+        return (user.Result is null) ? null : user.Result.ToDomainEntity();
+    }
+
     public async Task CreateUser(string email, string name, string password,
         Birthday birthday, bool isAcceptNewsletters)
     {
@@ -56,5 +77,13 @@ public sealed class UserRepository : IUserRepository
             isAcceptNewsletters);
         
         await _usersCollection.InsertOneAsync(userModel);
+    }
+
+    public async Task<List<User>> GetUsersByIds(List<string> ids)
+    {
+        List<UserMongoModel> users = (await _usersCollection
+            .FindAsync(user => ids.Contains(user.Id))).ToList();
+        
+        return users.Select(user => user.ToDomainEntity()).ToList();
     }
 }

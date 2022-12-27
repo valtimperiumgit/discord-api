@@ -1,6 +1,7 @@
 ﻿using Discord.Core.Shared;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.JsonWebTokens;
 
 namespace Discord.Api.Abstracts;
 
@@ -42,4 +43,13 @@ public abstract class ApiController : ControllerBase
             Status = status,
             Extensions = { { nameof(errors), errors } }
         };
+
+    protected string? GetClaimValueByProperty(string property)
+    {
+        return HttpContext.User.Claims
+            .Where(claim => claim.Properties
+                .FirstOrDefault().Value == property)
+            .Select(claim => claim.Value)
+            .FirstOrDefault();
+    }
 }

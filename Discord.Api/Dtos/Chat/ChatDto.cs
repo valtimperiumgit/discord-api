@@ -1,4 +1,6 @@
-﻿namespace Discord.Api.Dtos.Chat;
+﻿using Discord.Core.Entities;
+
+namespace Discord.Api.Dtos.Chat;
 
 public class ChatDto
 {
