@@ -40,7 +40,7 @@ public class CreateFriendRequestCommandHandler
       
       if (receivingUser.Friends.Contains(request.receivingId))
       {
-         return Result.Failure<Core.Entities.FriendRequest>(DomainErrors.Friend.UsersIsAlreadyFriends);
+         return Result.Failure<Core.Entities.FriendRequest>(DomainErrors.FriendRequest.UsersAlreadyFriends);
       }
 
       await _friendsRepository

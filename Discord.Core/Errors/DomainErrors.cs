@@ -35,6 +35,10 @@ public class DomainErrors
         public static readonly Error EmailAlreadyExist = new(
             "User.EmailAlreadyExist",
             "User with this email already exist");
+        
+        public static readonly Error UserNotFound = new(
+            "User.UserNotFound",
+            "User not found");
     }
     
     
@@ -51,5 +55,16 @@ public class DomainErrors
         public static readonly Error InvalidDay = new(
             "Birthday.InvalidDay",
             "The provided day value are invalid.");
+    }
+    
+    public class FriendRequest
+    {
+        public static readonly Error RequestAlreadyExist = new(
+            "FriendRequest.RequestAlreadyExist",
+            "Request already exist.");
+        
+        public static readonly Error UsersAlreadyFriends = new(
+            "FriendRequest.UsersIsAlreadyFriends",
+            "Users already friends.");
     }
 }

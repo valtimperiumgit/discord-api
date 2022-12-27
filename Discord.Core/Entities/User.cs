@@ -37,4 +37,5 @@ public class User : Entity
     public Birthday Birthday { get; private set; }
     
     public bool IsAcceptNewsletters { get; private set; }
+    public List<string> Friends { get; private set; }
 }
