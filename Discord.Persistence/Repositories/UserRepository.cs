@@ -105,6 +105,31 @@ public sealed class UserRepository : IUserRepository
         }
     }
 
+    public async Task DeleteFriend(string userId, string friendId)
+    {
+        using (var session = await _mongoClient.StartSessionAsync())
+        {
+            session.StartTransaction();
+            try
+            {
+                await _usersCollection.UpdateOneAsync(
+                    new BsonDocument("_id", ObjectId.Parse(userId)),
+                    new BsonDocument("$pull", new BsonDocument("friends", friendId)));
+        
+                await _usersCollection.UpdateOneAsync(
+                    new BsonDocument("_id", ObjectId.Parse(friendId)),
+                    new BsonDocument("$pull", new BsonDocument("friends", userId)));
+                
+                await session.CommitTransactionAsync();
+            }
+            catch (Exception e)
+            {
+                await session.AbortTransactionAsync();
+                throw;
+            }
+        }
+    }
+
     public async Task<List<User>> GetUsersByIds(List<string> ids)
     {
         List<UserMongoModel> users = (await _usersCollection

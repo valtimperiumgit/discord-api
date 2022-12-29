@@ -16,4 +16,6 @@ public interface IUserRepository
     public Task CreateUser(string email, string name, string password,
         Birthday birthday, bool isAcceptNewsletters);
     public Task AddFriend(string requestingId, string receivingId);
+    
+    Task DeleteFriend(string userId, string friendId);
 }

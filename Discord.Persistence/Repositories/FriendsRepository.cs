@@ -58,4 +58,18 @@ internal class FriendsRepository : IFriendsRepository
     {
         await _friendRequestCollection.DeleteOneAsync(request => request.Id == id);
     }
+
+    public async Task<List<FriendRequest>> GetAllUserFriendRequests(string userId)
+    {
+        return (await _friendRequestCollection
+                .FindAsync(request => request.RequestingId == userId || request.ReceivingId == userId))
+            .ToList()
+            .Select(request => request.ToDomainEntity())
+            .ToList();
+    }
+
+    public async Task DeleteFriendRequest(string id)
+    {
+        await _friendRequestCollection.DeleteOneAsync(request => request.Id == id);
+    }
 }

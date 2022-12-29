@@ -11,4 +11,7 @@ public interface IFriendsRepository
 
     Task<FriendRequest?> GetFriendRequestById(string id);
     Task DeleteFriendRequestById(string id);
+    Task<List<FriendRequest>> GetAllUserFriendRequests(string userId);
+
+    Task DeleteFriendRequest(string id);
 }

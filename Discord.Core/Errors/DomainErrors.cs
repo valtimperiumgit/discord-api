@@ -78,5 +78,16 @@ public class DomainErrors
         public static readonly Error AcceptNotYourRequest = new(
             "FriendRequest.AcceptNotYourRequest",
             "You can`t accept not your request.");
+        
+        public static readonly Error UserNotHavePermission = new(
+            "FriendRequest.UserNotHavePermission",
+            "User not have permission do operations with this request");
+    }
+
+    public class Friend
+    {
+        public static readonly Error UsersAreNotFriends = new(
+            "Friend.UsersAreNotFriends",
+            "Users are not friends");
     }
 }

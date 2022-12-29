@@ -3,7 +3,10 @@ using Discord.Api.Dtos.User;
 using Discord.Application.FriendRequest.Commands;
 using Discord.Application.FriendRequest.Commands.AcceptFriendRequest;
 using Discord.Application.FriendRequest.Commands.CreateFriendsRequest;
+using Discord.Application.FriendRequest.Commands.DeleteFriendRequest;
+using Discord.Application.FriendRequest.Queries.GetAllUserFriendRequests;
 using Discord.Application.FriendRequest.Queries.GetFriendRequest;
+using Discord.Application.User.Commands.DeleteFriend;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -63,6 +66,56 @@ public class FriendsController : ApiController
         
         return createFriendRequestResult.IsFailure ?
             HandleFailure(createFriendRequestResult) :
+            Ok();
+    }
+    
+    [HttpGet("requests")]
+    public async Task<IActionResult> GetFriendRequests
+    (
+        CancellationToken cancellationToken)
+    {
+        var userId = GetClaimValueByProperty(JwtRegisteredClaimNames.Sub);
+        
+        var getAllUserFriendRequestsQuery = new GetAllUserFriendRequestsQuery(userId);
+
+        var getAllUserFriendRequestsResult = await _sender.Send(getAllUserFriendRequestsQuery, cancellationToken);
+        
+        return getAllUserFriendRequestsResult.IsFailure ?
+            HandleFailure(getAllUserFriendRequestsResult) :
+            Ok(getAllUserFriendRequestsResult.Value);
+    }
+    
+    [HttpDelete("requests/delete")]
+    public async Task<IActionResult> DeleteFriendRequests
+    (
+        [FromQuery] string requestId,
+        CancellationToken cancellationToken)
+    {
+        var userId = GetClaimValueByProperty(JwtRegisteredClaimNames.Sub);
+        
+        var deleteFriendRequestCommand = new DeleteFriendRequestCommand(userId, requestId);
+
+        var deleteFriendRequestResult = await _sender.Send(deleteFriendRequestCommand, cancellationToken);
+        
+        return deleteFriendRequestResult.IsFailure ?
+            HandleFailure(deleteFriendRequestResult) :
+            Ok();
+    }
+    
+    [HttpDelete("delete")]
+    public async Task<IActionResult> DeleteFriend
+    (
+        [FromQuery] string friendId,
+        CancellationToken cancellationToken)
+    {
+        var userId = GetClaimValueByProperty(JwtRegisteredClaimNames.Sub);
+        
+        var deleteFriendCommand = new DeleteFriendCommand(userId, friendId);
+
+        var deleteFriendResult = await _sender.Send(deleteFriendCommand, cancellationToken);
+        
+        return deleteFriendResult.IsFailure ?
+            HandleFailure(deleteFriendResult) :
             Ok();
     }
 }
