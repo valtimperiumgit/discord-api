@@ -43,7 +43,7 @@ public class CreateFriendRequestCommandHandler
          return Result.Failure<Core.Entities.FriendRequest>(DomainErrors.User.UserNotFound);
       }
       
-      if (receivingUser.Friends.Contains(request.receivingId))
+      if (receivingUser.Friends.Contains(request.requestingId))
       {
          return Result.Failure<Core.Entities.FriendRequest>(DomainErrors.FriendRequest.UsersAlreadyFriends);
       }

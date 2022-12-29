@@ -42,6 +42,20 @@ internal class FriendsRepository : IFriendsRepository
                 .FindAsync(request => request.RequestingId == requestingId && request.ReceivingId == receivingId))
             .FirstOrDefaultAsync();
 
+        return friendRequest.Result == null ? null : friendRequest.Result.ToDomainEntity();
+    }
+
+    public async Task<FriendRequest?> GetFriendRequestById(string id)
+    {
+        var friendRequest = (await _friendRequestCollection
+                .FindAsync(request => request.Id == id))
+            .FirstOrDefaultAsync();
+
         return (friendRequest.Result is null) ? null : friendRequest.Result.ToDomainEntity();
+    }
+
+    public async Task DeleteFriendRequestById(string id)
+    {
+        await _friendRequestCollection.DeleteOneAsync(request => request.Id == id);
     }
 }

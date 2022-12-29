@@ -79,6 +79,32 @@ public sealed class UserRepository : IUserRepository
         await _usersCollection.InsertOneAsync(userModel);
     }
 
+    public async Task AddFriend(string requestingId, string receivingId)
+    {
+        using (var session = await _mongoClient.StartSessionAsync())
+        {
+            session.StartTransaction();
+            try
+            {
+                var requestingFilter = Builders<UserMongoModel>.Filter.Eq("_id", ObjectId.Parse(requestingId));
+
+                var receivingFilter = Builders<UserMongoModel>.Filter.Eq("_id", ObjectId.Parse(receivingId));
+            
+                var requestingUpdate = Builders<UserMongoModel>.Update.AddToSet("friends", receivingId);
+                var receivingUpdate = Builders<UserMongoModel>.Update.AddToSet("friends", requestingId);
+
+                await _usersCollection.UpdateOneAsync(session, requestingFilter, requestingUpdate);
+                await _usersCollection.UpdateOneAsync(session, receivingFilter, receivingUpdate);
+                await session.CommitTransactionAsync();
+            }
+            catch (Exception e)
+            {
+                await session.AbortTransactionAsync();
+                throw;
+            }
+        }
+    }
+
     public async Task<List<User>> GetUsersByIds(List<string> ids)
     {
         List<UserMongoModel> users = (await _usersCollection

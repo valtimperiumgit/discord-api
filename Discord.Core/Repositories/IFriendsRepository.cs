@@ -8,4 +8,7 @@ public interface IFriendsRepository
 
     Task CreateFriendRequest(string requestingId, string receivingId);
     Task<FriendRequest?> GetFriendRequest(string requestingId, string receivingId);
+
+    Task<FriendRequest?> GetFriendRequestById(string id);
+    Task DeleteFriendRequestById(string id);
 }

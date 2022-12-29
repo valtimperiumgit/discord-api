@@ -70,5 +70,13 @@ public class DomainErrors
         public static readonly Error SameIds = new(
             "FriendRequest.SameIds",
             "You can`t send friend request for yourself.");
+        
+        public static readonly Error RequestNotFound = new(
+            "FriendRequest.RequestNotFound",
+            "Request not found.");
+        
+        public static readonly Error AcceptNotYourRequest = new(
+            "FriendRequest.AcceptNotYourRequest",
+            "You can`t accept not your request.");
     }
 }
