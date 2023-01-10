@@ -3,4 +3,5 @@
 public enum MessageType
 {
     Text = 1,
+    
 }
