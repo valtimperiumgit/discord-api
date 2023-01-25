@@ -1,5 +1,7 @@
 using Discord.Api.Options;
 using Discord.Application.Behaviors;
+using Discord.Application.Hubs;
+using Discord.Infrastructure.Hubs;
 using FluentValidation;
 using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -19,7 +21,11 @@ builder
             .AsImplementedInterfaces()
             .WithScopedLifetime());
 
+builder.Services.AddScoped<IFriendsHub, FriendsHub>();
+
 builder.Services.AddMediatR(Discord.Application.AssemblyReference.Assembly);
+
+builder.Services.AddSignalR();
 
 builder.Services.AddSingleton<IMongoClient, MongoClient>(sp 
     => new MongoClient(builder.Configuration.GetConnectionString("MongoDb")));
@@ -60,6 +66,8 @@ app.UseHttpsRedirection();
 app.UseAuthentication();
 
 app.UseAuthorization();
+
+app.MapHub<FriendsHub>("friends-hub");
 
 app.MapControllers();
 

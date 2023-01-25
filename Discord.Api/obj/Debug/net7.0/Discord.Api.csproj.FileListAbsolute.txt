@@ -82,3 +82,8 @@ C:\Users\dev\RiderProjects\Discord\Discord.Api\bin\Debug\net7.0\Amazon.Lambda.As
 C:\Users\dev\RiderProjects\Discord\Discord.Api\bin\Debug\net7.0\Amazon.Lambda.Core.dll
 C:\Users\dev\RiderProjects\Discord\Discord.Api\bin\Debug\net7.0\Amazon.Lambda.Logging.AspNetCore.dll
 C:\Users\dev\RiderProjects\Discord\Discord.Api\bin\Debug\net7.0\Amazon.Lambda.Serialization.SystemTextJson.dll
+C:\Users\dev\RiderProjects\Discord\Discord.Api\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\dev\RiderProjects\Discord\Discord.Api\bin\Debug\net7.0\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\dev\RiderProjects\Discord\Discord.Api\bin\Debug\net7.0\Microsoft.Owin.dll
+C:\Users\dev\RiderProjects\Discord\Discord.Api\bin\Debug\net7.0\Microsoft.Owin.Security.dll
+C:\Users\dev\RiderProjects\Discord\Discord.Api\bin\Debug\net7.0\Owin.dll
